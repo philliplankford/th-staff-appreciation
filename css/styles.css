@@ -27,6 +27,10 @@ body {
 }
 
 a {
+    color: var(--main-color);
+}
+
+a:visited {
     color: var(--card-text);
 }
 
@@ -42,6 +46,7 @@ header {
 .header-title {
     width: 98%;
     text-align: center;
+    color: var(--main-bg);
     border: 1px solid var(--card-text);
     border-radius: .2rem;
     padding: 1rem .5rem; 
@@ -51,6 +56,8 @@ header {
 .header-intro {
     color: var(--intro-text);
     background-color: var(--main-color);
+    background-image: url(../img/temp_banner.png);
+    background-blend-mode: luminosity;
     text-align: center;
     padding: 2rem;
 }
@@ -82,10 +89,15 @@ footer {
     padding: .5rem;
 }
 
+.footer-content p:first-child {
+    margin-bottom: .2rem;
+}
+
 /* === CARDS === */
 .card-columns {
     background-color: var(--main-bg);
     padding: .5rem;
+    margin: 1rem;
 }
 
 .card {
@@ -95,7 +107,9 @@ footer {
     background-color: var(--card-bg);
     border-radius: .5rem;
     box-shadow: 0px 10px 0px 0px var(--card-shadow);
-    break-inside: avoid; /* prevents columns premature cut-off */
+    break-inside: avoid; /* prevents column items premature cut-off */
+    page-break-inside: avoid; /* firefox compatability */
+    transform: translateZ(0); /* columns cutting off box shadow fix */
 }
 
 .card-header {
@@ -130,14 +144,12 @@ footer {
     }
 
     .card-columns {
-        /* bug: the last cards box shadow gets cut off */
         columns: 2 auto;
         column-gap: 1rem;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    
     .card-columns {
         columns: 3 auto;
         column-gap: 1rem;
