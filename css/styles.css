@@ -30,7 +30,7 @@ a {
     color: var(--card-text);
 }
 
-/* === STYLES === */
+/* === Layout === */
 header {
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@ footer {
 }
 
 /* === CARDS === */
-.card-grid {
+.card-columns {
     background-color: var(--main-bg);
     padding: .5rem;
 }
@@ -95,6 +95,7 @@ footer {
     background-color: var(--card-bg);
     border-radius: .5rem;
     box-shadow: 0px 10px 0px 0px var(--card-shadow);
+    break-inside: avoid; /* prevents columns premature cut-off */
 }
 
 .card-header {
@@ -128,17 +129,17 @@ footer {
         text-align: start;
     }
 
-    .card-grid {
-        display: grid; 
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1rem;
+    .card-columns {
+        /* bug: the last cards box shadow gets cut off */
+        columns: 2 auto;
+        column-gap: 1rem;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .card-grid {
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
+    
+    .card-columns {
+        columns: 3 auto;
+        column-gap: 1rem;
     }
 }
