@@ -3,8 +3,9 @@
     --main-color: #6dc575;
     --main-bg: #45535b;
     --card-bg: #f8f8f8;
-    --card-shadow: #6dc575;
     --card-text: #45535b;
+    --card-shadow: rgba(0,0,0,0.75);
+    --card-border: #6dc575;
     --intro-text: #f8f8f8;
 }
 
@@ -34,13 +35,15 @@ a:visited {
     color: var(--card-text);
 }
 
-/* === Layout === */
+/* === LAYOUT === */
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--card-bg);
+    box-shadow: 0px 5px 10px 0px var(--card-shadow);
+    z-index:10;
 }
 
 .header-title {
@@ -106,7 +109,8 @@ footer {
     margin-bottom: 1.5rem;
     background-color: var(--card-bg);
     border-radius: .5rem;
-    box-shadow: 0px 10px 0px 0px var(--card-shadow);
+    border-bottom: 15px solid var(--card-border);
+    box-shadow: 0px 5px 5px 1px var(--card-shadow);
     break-inside: avoid; /* prevents column items premature cut-off */
     page-break-inside: avoid; /* firefox compatability */
     transform: translateZ(0); /* columns cutting off box shadow fix */
