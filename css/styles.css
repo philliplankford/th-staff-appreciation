@@ -97,7 +97,7 @@ footer {
 .card-columns {
     background-color: var(--main-bg);
     padding: .5rem;
-    margin: 1rem 0rem;
+    margin: 1rem;
 }
 
 .card {
