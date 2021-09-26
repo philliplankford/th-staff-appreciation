@@ -35,6 +35,10 @@ a:visited {
     color: var(--card-text);
 }
 
+p {
+    margin: 1rem 0;
+}
+
 /* === LAYOUT === */
 header {
     display: flex;
