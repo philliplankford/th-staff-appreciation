@@ -67,6 +67,7 @@ header {
   background-blend-mode: luminosity;
   text-align: center;
   padding: 2rem;
+  height: 100%;
 }
 
 .header-intro h2 {
@@ -118,6 +119,11 @@ footer {
   break-inside: avoid; /* prevents column items premature cut-off */
   page-break-inside: avoid; /* firefox compatability */
   transform: translateZ(0); /* columns cutting off box shadow fix */
+  transition: all .5s;
+}
+
+.card:hover {
+    border-color: #36623a;
 }
 
 .card-header {
