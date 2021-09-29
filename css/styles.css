@@ -210,4 +210,12 @@ p.intro-text {
   p.intro-text {
     font-size: 1.4em;
   }
+
+  @media not all and (min-resolution:.001dpcm) { 
+    .card-columns {
+      columns: 2 auto;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
 }
