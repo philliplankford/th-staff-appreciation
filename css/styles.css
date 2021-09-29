@@ -184,7 +184,7 @@ p.intro-text {
   }
 
   .card-columns {
-    columns: 3 auto;
+    columns: 2 auto;
     column-gap: 1rem;
   }
 
@@ -202,6 +202,7 @@ p.intro-text {
 
 @media screen and (min-width: 1024px) {
   .card-columns {
+    columns: 3 auto;
     max-width: 1200px;
     margin: 0 auto;
   }
