@@ -100,6 +100,10 @@ footer {
   padding: 0.5rem;
 }
 
+#back-to-top {
+  text-decoration: underline;
+}
+
 .footer-content {
   width: 100%;
   font-size: 0.8rem;
